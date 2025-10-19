@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "./Sidebar.css";
+import "./SideBar.css";
 import { Home, User, Folder, Mail } from "lucide-react";
 
 const Sidebar = () => {
