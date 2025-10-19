@@ -1,0 +1,276 @@
+/* Root section style */
+.projects-section {
+  background: #1a1515;
+  color: #e2e2e2;
+  padding: 4rem 2rem;
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+/* Section title styling */
+.section-title {
+  margin-bottom: 3.9rem;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.section-title h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  font-family: "CreakingCrypt", sans-serif;
+  background: linear-gradient(135deg, #c62f15 0%, #ff5a3c 50%, #c62f15 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 20px rgba(198, 47, 21, 0.3);
+  filter: drop-shadow(0 0 8px rgba(198, 47, 21, 0.4));
+  transition: all 0.3s ease;
+  letter-spacing: 2px;
+}
+
+.section-title h1:hover {
+  filter: drop-shadow(0 0 20px rgba(255, 90, 60, 0.6));
+  letter-spacing: 3px;
+}
+
+/* Two-column layout container */
+.projects-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: flex-start;
+  min-height: calc(88vh - 150px);
+  position: relative;
+  z-index: 1;
+}
+
+/* Left column - Introduction/Description */
+.projects-intro {
+  padding-right: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: left;
+  height: 100%;
+}
+
+.projects-intro h2 {
+  font-family: "CreakingCrypt", sans-serif;
+  font-size: 2rem;
+  background: linear-gradient(135deg, #ff6666 0%, #ff8888 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 1.4;
+  margin-bottom: 1.5rem;
+  animation: float 3s ease-in-out infinite;
+}
+
+/* UPDATED paragraph style */
+.projects-intro p {
+  font-size: 1.1rem;
+  color: #d0d0d0;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  padding: 1rem 1.5rem;
+  background: #2a1f1f;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(198, 47, 21, 0.3);
+  transition: all 0.3s ease;
+  border: none;
+  backdrop-filter: none;
+  border-left: none;
+}
+
+.projects-intro p:hover {
+  background: #3c2727;
+  box-shadow: 0 6px 20px rgba(255, 90, 60, 0.5);
+  transform: translateY(-4px);
+}
+
+/* Right column - Cards */
+.projects-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90%;
+  padding-top: 5rem;
+  position: relative;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+/* Project card used inside CardSwap */
+.project-card {
+  background: linear-gradient(135deg, #1a1a1a 0%, #242020 100%);
+  border: 2px solid #c62f15;
+  padding: 1.5rem;
+  border-radius: 10px;
+  max-width: 600px;
+  margin: 0 auto;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(198, 47, 21, 0.2);
+  text-align: center;
+}
+
+.project-card h3 {
+  font-family: "CreakingCrypt", sans-serif;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, #ff6666 0%, #ff8888 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.project-card p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+  color: #d0d0d0;
+}
+
+.project-card:hover {
+  transform: scale(1.05) rotateY(5deg);
+  box-shadow: 0 0 30px rgba(255, 90, 60, 0.4), 0 0 60px rgba(198, 47, 21, 0.2);
+  border-color: #ff5a3c;
+}
+
+/* Animations */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Responsive Design */
+
+/* Tablet view */
+@media (max-width: 1024px) {
+  .projects-content {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    min-height: auto;
+  }
+
+  .projects-intro {
+    padding-right: 0;
+  }
+
+  .projects-intro h2 {
+    font-size: 1.8rem;
+  }
+
+  .projects-intro p {
+    font-size: 1rem;
+    padding: 0.8rem;
+  }
+
+  .project-card {
+    max-width: 100%;
+  }
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+  /* Stack everything vertically */
+  .projects-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    min-height: auto;
+  }
+
+  /* Section title adjustments */
+  .section-title h1 {
+    font-size: 1.75rem;
+    margin-bottom: 2rem;
+  }
+
+  /* Keep intro visible on mobile */
+  .projects-intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0 1rem;
+  }
+
+  .projects-intro h2 {
+    font-size: 1.5rem;
+  }
+
+  .projects-intro p {
+    font-size: 1rem;
+  }
+
+  /* CardSwap container adjustments */
+  .projects-container {
+    width: 100%;
+    display: flex;
+
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    position: relative !important;
+    transform: none !important;
+  }
+
+  /* Project cards */
+  .project-card {
+    max-width: 95%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .project-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .project-card p {
+    font-size: 1rem;
+  }
+
+  /* CardSwap container scaling fixes for mobile */
+  .card-swap-container {
+    position: relative !important;
+    bottom: auto !important;
+    right: auto !important;
+    transform: none !important;
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+}
+
+/* Small devices */
+@media (max-width: 480px) {
+  .projects-container {
+    gap: 1rem;
+  }
+
+  .project-card {
+    width: 90%;
+  }
+}
+.project-image {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-top: 1rem;
+
+  transition: transform 0.3s ease;
+}

@@ -1,0 +1,88 @@
+@font-face {
+  font-family: "CreakingCrypt";
+  src: url("/fonts/CreakingCrypt-Regular.woff2") format("woff2"),
+    url("/fonts/CreakingCrypt-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* 🔹 Section Layout */
+.skills-section {
+  background: radial-gradient(circle at center, #0c0c0c 0%, #050505 100%);
+  color: #e0e0e0;
+  padding: 6rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 🔹 Container */
+.skills-container {
+  max-width: 900px;
+  width: 100%;
+  text-align: center;
+}
+
+/* 🔹 Titles */
+.skills-title {
+  font-family: "CreakingCrypt", serif;
+  font-size: 2.8rem;
+  letter-spacing: 2px;
+  color: #f5f5f5;
+  margin-bottom: 1.5rem;
+}
+
+.skills-subtitle {
+  color: #a3a3a3;
+  font-size: 1rem;
+  max-width: 700px;
+  margin: 0 auto 3rem auto;
+}
+
+/* 🔹 Skills List */
+.skills-chart {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.skill {
+  text-align: left;
+}
+
+.skill-header {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #dcdcdc;
+}
+
+.skill-bar {
+  background: #1a1a1a;
+  border-radius: 10px;
+  height: 12px;
+  overflow: hidden;
+  box-shadow: inset 0 0 6px rgba(255, 255, 255, 0.05);
+}
+
+/* 🔹 Animated Progress Bars */
+.skill-progress {
+  background: linear-gradient(90deg, #8b0000, #a52a2a, #cc7722);
+  height: 100%;
+  width: 0;
+  border-radius: 10px;
+  transition: width 1.8s ease-in-out;
+}
+
+/* 🔹 Responsive */
+@media (max-width: 768px) {
+  .skills-title {
+    font-size: 2rem;
+  }
+
+  .skills-subtitle {
+    font-size: 0.9rem;
+  }
+}

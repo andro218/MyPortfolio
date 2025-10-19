@@ -1,0 +1,67 @@
+body,
+html,
+.App {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  width: 100%;
+  overflow-x: hidden; /* Prevents horizontal scroll on small screens */
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1 0 auto;
+  padding-top: 6rem; /* Space for fixed navbar on mobile */
+}
+
+@media (min-width: 768px) {
+  .main-content {
+    padding-top: 0; /* Remove padding on desktop since navbar is hidden */
+  }
+}
+
+body {
+  background-color: #090808ff;
+  color: white;
+  font-family: sans-serif;
+  line-height: 1.6; /* Improves text readability */
+}
+
+/* Typography scaling */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  line-height: 1.2;
+}
+
+p {
+  margin: 0.5rem 0;
+}
+
+/* Responsive container helper */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  box-sizing: border-box;
+}
+
+/* Custom font import */
+@font-face {
+  font-family: "CreakingCrypt";
+  src: url("/fonts/CreakingCrypt-Regular.woff2") format("woff2"),
+    url("/fonts/CreakingCrypt-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}

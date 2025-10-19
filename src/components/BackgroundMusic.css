@@ -1,0 +1,36 @@
+.background-music {
+  position: fixed;
+  bottom: 2rem;
+  left: 2rem;
+  z-index: 1000;
+}
+
+.music-toggle {
+  background: #211e1e;
+  border: 2px solid #c62f15;
+  color: #ffffff;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(198, 47, 21, 0.3);
+}
+
+.music-toggle:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 16px rgba(198, 47, 21, 0.4);
+  background: #2a2626;
+}
+
+.music-toggle svg {
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.music-toggle:hover svg {
+  color: #c62f15;
+}

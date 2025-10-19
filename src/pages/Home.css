@@ -1,0 +1,187 @@
+/* src/pages/Home.css */
+html {
+  scroll-behavior: smooth;
+}
+
+.home-section {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.home-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+.home-content {
+  position: relative;
+  z-index: 2;
+  padding: 20vh 5% 0 5%;
+  max-width: 700px;
+  text-align: left;
+}
+
+/* Responsive title and subtitle */
+.home-title {
+  font-size: clamp(2.5rem, 8vw, 6rem);
+  font-family: "CreakingCrypt", sans-serif;
+  color: #c62f15;
+  text-shadow: 2px 2px 6px rgba(198, 47, 21, 0.6);
+  line-height: 0.95;
+  margin-bottom: 1rem;
+}
+
+.home-subtitle {
+  font-size: clamp(1rem, 2.5vw, 1.4rem);
+  color: #f5f5f5;
+  line-height: 1.4;
+}
+
+/* Button styling */
+.get-started-btn {
+  position: absolute;
+  bottom: 0.5px;
+  right: 20px;
+  background-color: #c62f15;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1.1rem;
+  border-radius: 8px 8px 0 0;
+  cursor: pointer;
+  z-index: 10;
+  transition: background-color 0.3s ease, transform 0.2s ease,
+    box-shadow 0.25s ease;
+}
+
+/* Hover style */
+.get-started-btn:hover {
+  background-color: #a52210;
+  transform: translateY(-3px);
+}
+
+/* Fly-up animation */
+.get-started-btn.fly-up {
+  animation: flyUp 0.6s ease forwards;
+}
+
+@keyframes flyUp {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+}
+
+/* Button tap effect when clicked (scale down quickly) */
+.get-started-btn:active {
+  transform: scale(0.95);
+  transition: transform 0.1s ease;
+}
+
+/* Click feedback glow animation triggered by JS */
+.get-started-btn.clicked {
+  box-shadow: 0 0 15px 4px rgba(255, 255, 255, 0.8);
+  background-color: #a21f0e;
+  transition: box-shadow 0.25s ease, background-color 0.25s ease;
+}
+
+/* 🔹 Responsive adjustments */
+@media (max-width: 1024px) {
+  .home-content {
+    padding-top: 15vh;
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  .home-content {
+    text-align: center;
+    padding-top: 20vh;
+    max-width: 100%;
+  }
+
+  .home-title {
+    font-size: 3rem;
+  }
+
+  .get-started-btn {
+    right: 15px;
+    bottom: 0.5px;
+    font-size: 1rem;
+    padding: 0.6rem 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-title {
+    font-size: 2.4rem;
+  }
+
+  .home-subtitle {
+    font-size: 1rem;
+  }
+}
+
+@keyframes flyUp {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+}
+
+/* 🔹 Responsive adjustments */
+@media (max-width: 1024px) {
+  .home-content {
+    padding-top: 15vh;
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  .home-content {
+    text-align: center;
+    padding-top: 20vh;
+    max-width: 100%;
+  }
+
+  .home-title {
+    font-size: 3rem;
+  }
+
+  .get-started-btn {
+    right: 15px;
+    bottom: 0.5px;
+    font-size: 1rem;
+    padding: 0.6rem 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-title {
+    font-size: 2.4rem;
+  }
+
+  .home-subtitle {
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,92 @@
+.contact-section {
+  background: #1a1515;
+  color: #e2e2e2;
+  min-height: 80vh;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+}
+
+.contact-container {
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.contact-brand {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-brand-title {
+  font-family: "CreakingCrypt", sans-serif;
+  font-size: 2.5rem;
+  color: #c62f15;
+  margin-bottom: 1rem;
+}
+
+.contact-brand-desc {
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+
+.contact-section-title {
+  font-family: "CreakingCrypt", sans-serif;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+}
+
+.contact-links-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: stretch;
+}
+
+.contact-link {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  text-decoration: none;
+  padding: 0.9rem 1rem;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.06);
+  transition: 0.18s;
+  flex: 0 1 260px;
+  min-width: 200px;
+  box-sizing: border-box;
+}
+.contact-link-value {
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+.contact-link:hover {
+  background: white;
+  border-color: white;
+  color: #c62f15;
+  transform: translateY(-2px);
+}
+
+.contact-link:hover .contact-link-icon {
+  color: #c62f15;
+}
+
+@media (max-width: 768px) {
+  .contact-container {
+    padding: 0 1rem;
+  }
+
+  .contact-brand-title {
+    font-size: 1.5rem;
+  }
+
+  .contact-section-title {
+    font-size: 1.3rem;
+  }
+}
